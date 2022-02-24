@@ -5,7 +5,7 @@ $products = [
     ['name' => 'WineBottle', 'pricePretax' => 8.26,'taxrate'=> 1.21, 'numPieces'=>2],
 ];
 
-function createPriceInclTax($products)
+function totalInclTaxAndTaxTotal($products)
 {   
     $currentTotal = 0;
     $taxTotal = 0;
@@ -18,12 +18,12 @@ function createPriceInclTax($products)
         $currentTotal += $productTotalIncl;
         $taxTotal += $productTaxCost;
     }
-    echo '<h2>$total</h2>';
+    echo '<h2>$ total incl. tax</h2>';
     var_dump($currentTotal);
     echo '</br>';
     echo '===============';
     echo '</br>';
+    echo '<h2>$ tax total</h2>';
     var_dump($taxTotal);
 }
-
-createPriceInclTax($products);
+totalInclTaxAndTaxTotal($products);

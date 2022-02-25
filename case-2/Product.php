@@ -40,7 +40,7 @@ class Product {
     public function fruitDiscount()//discounted price pretax for a Product
     {
         if($this->type === "fruit"){
-            $discountPrice = $this->pricePretax / 2;
+            $discountPrice = $this->pricePretax * 0.5;
             return $discountPrice;
         }
     }

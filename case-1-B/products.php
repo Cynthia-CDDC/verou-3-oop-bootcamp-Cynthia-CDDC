@@ -15,4 +15,28 @@ class Products {
         $this-> taxrate = $taxrate;
         $this-> numPieces = $numPieces;
     }
+    
+    public function totalPrice()
+    {   $currentTotal = 0;
+        for ($i = 0; $i < $this-> numPieces; $i++){
+            $currentTotal += $this->pricePretax;
+        }
+        return $currentTotal;
+    }
+    public function TaxTotal() 
+    {
+        $taxTotal = 0;
+        for ($i = 0; $i < $this-> numPieces; $i++){
+            $totalInclTax = $this->pricePretax * $this->taxrate;
+            $taxAmount = $totalInclTax - $this->pricePretax;
+            $taxTotal += $taxAmount;
+        }
+        return $taxTotal;
+    }
+    public function getTotal()
+    {   
+        $totalPrice = $this->totalPrice();
+        $taxTotal = $this->TaxTotal();
+        return $totalPrice + $taxTotal;
+    }
 }

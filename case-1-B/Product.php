@@ -1,19 +1,21 @@
 <?php
 declare(strict_types=1);
 
-class Products {
+class Product {
     // The Properties
     public $name;
     public $pricePretax;
     public $taxrate;
     public $numPieces;
+    public $type;
     // The Constructor with incoming parameters in the brackets
-    public function __construct($name, $pricePretax, $taxrate, $numPieces) 
+    public function __construct($name, $pricePretax, $taxrate, $numPieces, $type) 
     {
         $this-> name = $name;
         $this-> pricePretax= $pricePretax;
         $this-> taxrate = $taxrate;
         $this-> numPieces = $numPieces;
+        $this-> type = $type;
     }
     
     public function totalPrice()

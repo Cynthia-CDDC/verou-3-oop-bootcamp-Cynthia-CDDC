@@ -16,17 +16,32 @@ $basket = [
     $apple,
     $wineBottle,
 ];
+//total price = sum of the total of each Product.
+//discounted total price = same but use discounted price where needed.
+function grandTotal ()
+{
+    
+}
 
-$bananaTotal = $banana->getTotal();
-$appleTotal = $apple->getTotal();
-$wineBottleTotal = $wineBottle->getTotal();
+function grandTotalDiscounted()
+{
 
-echo $banana->totalPrice();
+}
+
+echo $banana->getPriceInclTax();
 echo '</br>';
 echo '===============';
 echo '</br>';
-echo $banana->TaxTotal();
+echo $banana->getTaxPrice();
 echo '</br>';
 echo '===============';
 echo '</br>';
-echo $bananaTotal + $appleTotal + $wineBottleTotal;
+echo $banana->pricePretax;
+echo '</br>';
+echo '===============';
+echo '</br>';
+echo $banana->fruitDiscount();
+echo '</br>';
+echo '===============';
+echo '</br>';
+echo $banana->total();

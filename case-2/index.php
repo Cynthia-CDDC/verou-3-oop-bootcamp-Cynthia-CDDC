@@ -15,13 +15,15 @@ $basket = [
     $apple,
     $wineBottle,
 ];
-//total price = sum of the total of each Product.
 //discounted total price = same but use discounted price where needed.
-function grandTotal ()
+function grandTotal ($basket)
 {
-
+    $grandTotal = 0;
+    foreach ($basket as $item){
+        $grandTotal = $grandTotal + $item->total();
+    }
+    return $grandTotal;
 }
-
 function grandTotalDiscounted()
 {
 
@@ -44,3 +46,7 @@ echo '</br>';
 echo '===============';
 echo '</br>';
 echo $banana->total();
+echo '</br>';
+echo '===============';
+echo '</br>';
+echo grandTotal($basket);

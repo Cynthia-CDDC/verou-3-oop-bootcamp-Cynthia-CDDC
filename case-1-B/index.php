@@ -21,6 +21,8 @@ $bananaTotal = $banana->getTotal();
 $appleTotal = $apple->getTotal();
 $wineBottleTotal = $wineBottle->getTotal();
 
+//grandTotal=0, for each basketItem take the total price and add to grandTotal
+
 echo $banana->totalPrice();
 echo '</br>';
 echo '===============';

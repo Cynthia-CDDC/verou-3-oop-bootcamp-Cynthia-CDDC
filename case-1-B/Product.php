@@ -17,7 +17,6 @@ class Product {
         $this-> numPieces = $numPieces;
         $this-> type = $type;
     }
-    
     public function totalPrice()
     {   $currentTotal = 0;
         for ($i = 0; $i < $this-> numPieces; $i++){
